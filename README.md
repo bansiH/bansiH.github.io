@@ -50,7 +50,7 @@
     Bengaluru, India</p>
 
     <div class="footer">
-        &copy; 2026 Haudakari Technical Advisory. Built on GitHub Pages.
+        &copy; 2026 Technical Advisory to CXOs. Built on GitHub Pages.
     </div>
 
 </body>
