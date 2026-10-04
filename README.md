@@ -1,2 +1,57 @@
-# github.io
-Enterprise Agentic AI Scaling Blueprint: Building a Real-Time Agents using AI First Principles. Built for CTOs, VPs &amp; Fractional leaders looking to master Token Ergonomics—slashing cloud API burn by up to 88% while safely expanding production agent workloads.  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haudakari Technical Advisory</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #fafbfc;
+        }
+        h1 { font-size: 2.2rem; margin-bottom: 5px; color: #000; font-weight: 800; }
+        h2 { font-size: 1.4rem; margin-top: 30px; border-bottom: 1px solid #e1e4e8; padding-bottom: 8px; font-weight: 600; }
+        .subtitle { color: #586069; font-size: 1.1rem; margin-top: 0; margin-bottom: 30px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #000; }
+        .footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #e1e4e8; color: #586069; font-size: 0.9rem; }
+        a { color: #0366d6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <h1>Haudakari Technical Advisory</h1>
+    <p class="subtitle">High-Scale Distributed Systems | Cloud Infrastructure | AI Platform Strategy</p>
+
+    <p>We partner with mid-market enterprises and VC-backed tech startups as a <strong>Fractional CTO</strong> and <strong>Executive Infrastructure Advisor</strong>. We treat technology deployment as a strict mathematical optimization problem—balancing rapid engineering velocity against absolute cloud unit economics.</p>
+
+    <h2>What We Do</h2>
+    <ul>
+        <li><strong>Token Ergonomics Frameworks:</strong> Structuring multi-model Pareto-routing pipelines designed to scale internal AI agent traffic while keeping infrastructure costs flat.</li>
+        <li><strong>Context Window Engineering:</strong> Developing semantic enterprise context graphs and "Code-Mode" subprocess sandboxing to eliminate multi-turn tool bloat and platform hallucination.</li>
+        <li><strong>Architectural Telemetry & FinOps:</strong> Launching real-time trace analysis dashboards to track down execution anti-patterns and optimize cloud budget allocation.</li>
+    </ul>
+
+    <h2>Provenance & Pedigree</h2>
+    <p>Our advisory frameworks are built on battle-tested operational engineering pipelines from elite global scale ecosystems, drawing from former technology leadership roles at <strong>Uber (EM2 Platform Scale)</strong> and <strong>Paytm (Director of Engineering)</strong>.</p>
+
+    <h2>Engage Our Practice</h2>
+    <p>We are currently accepting select growth-stage portfolios for technical audits, architectural reviews, and fractional advisory blocks.</p>
+    
+    <p><strong>Contact:</strong> bansihaudakari@gmail.com<br>
+    <strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank">://linkedin.com</a><br>
+    Bengaluru, India</p>
+
+    <div class="footer">
+        &copy; 2026 Haudakari Technical Advisory. Built on GitHub Pages.
+    </div>
+
+</body>
+</html>
