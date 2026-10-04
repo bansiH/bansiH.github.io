@@ -1,49 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Dynamic State-Aware Shell Header Generation
-    const pathName = window.location.pathname.split("/").pop() || "index.html";
-    const navShellElement = document.getElementById("dynamic-navbar");
+    // 1. Core Dynamic Navigation Setup with Explicit Path Matching
+    const currentUrlPath = window.location.pathname;
+    const currentPageFile = currentUrlPath.split("/").pop() || "index.html";
+    const navbarElement = document.getElementById("dynamic-navbar");
 
-    if (navShellElement) {
-        navShellElement.innerHTML = `
+    if (navbarElement) {
+        navbarElement.innerHTML = `
             <div class="container">
                 <div class="nav-container">
-                    <a href="index.html" class="nav-logo">Bansilal.io</a>
+                    <a href="index.html" class="nav-logo">Haudakari.io</a>
                     <div class="nav-links-wrapper">
                         <nav class="nav-links">
-                            <a href="index.html" class="${pathName === 'index.html' ? 'active' : ''}">Home</a>
-                            <a href="about.html" class="${pathName === 'about.html' ? 'active' : ''}">About</a>
-                            <a href="services.html" class="${pathName === 'services.html' ? 'active' : ''}">Services</a>
-                            <a href="testimonials.html" class="${pathName === 'testimonials.html' ? 'active' : ''}">Testimonials</a>
-                            <a href="clients.html" class="${pathName === 'clients.html' ? 'active' : ''}">Clients</a>
-                            <a href="articles.html" class="${pathName === 'articles.html' ? 'active' : ''}">Articles</a>
+                            <a href="index.html" class="${currentPageFile === 'index.html' ? 'active' : ''}">Home</a>
+                            <a href="about.html" class="${currentPageFile === 'about.html' ? 'active' : ''}">About</a>
+                            <a href="services.html" class="${currentPageFile === 'services.html' ? 'active' : ''}">Services</a>
+                            <a href="testimonials.html" class="${currentPageFile === 'testimonials.html' ? 'active' : ''}">Testimonials</a>
+                            <a href="clients.html" class="${currentPageFile === 'clients.html' ? 'active' : ''}">Clients</a>
+                            <a href="articles.html" class="${currentPageFile === 'articles.html' ? 'active' : ''}">Articles</a>
                         </nav>
-                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Page Color State">☀️ Light</button>
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">☀️ Light</button>
                     </div>
                 </div>
             </div>
         `;
     }
 
-    // 2. Persistent Cross-Page Theme Routing System
-    const themeButton = document.getElementById("theme-toggle");
-    const activeCachedPreference = localStorage.getItem("portfolio-theme") || "light";
+    // 2. Persistent State Theme Routing Engine
+    const themeToggleButton = document.getElementById("theme-toggle");
+    const activeSavedTheme = localStorage.getItem("portfolio-theme") || "light";
 
-    document.documentElement.setAttribute("data-theme", activeCachedPreference);
-    syncToggleText(activeCachedPreference);
+    // Establish Base Attributes Instantly
+    document.documentElement.setAttribute("data-theme", activeSavedTheme);
+    updateToggleButtonVisual(activeSavedTheme);
 
-    if (themeButton) {
-        themeButton.addEventListener("click", () => {
-            const currentSetting = document.documentElement.getAttribute("data-theme");
-            const targetsNewSetting = currentSetting === "light" ? "dark" : "light";
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener("click", () => {
+            const targetedTheme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
             
-            document.documentElement.setAttribute("data-theme", targetsNewSetting);
-            localStorage.setItem("portfolio-theme", targetsNewSetting);
-            syncToggleText(targetsNewSetting);
+            document.documentElement.setAttribute("data-theme", targetedTheme);
+            localStorage.setItem("portfolio-theme", targetedTheme);
+            updateToggleButtonVisual(targetedTheme);
         });
     }
 
-    function syncToggleText(mode) {
-        if (!themeButton) return;
-        themeButton.innerHTML = mode === "light" ? "🌙 Dark" : "☀️ Light";
+    function updateToggleButtonVisual(theme) {
+        if (!themeToggleButton) return;
+        themeToggleButton.innerHTML = theme === "light" ? "🌙 Dark" : "☀️ Light";
     }
 });
